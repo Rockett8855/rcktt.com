@@ -125,6 +125,17 @@
             margin-bottom: 20px;
         }
 
+        /* About section links */
+        .about-content a {
+            color: var(--indian-red);
+            font-weight: 500;
+        }
+
+        .about-content a:hover {
+            color: var(--caf-noir);
+            text-decoration-thickness: 2px;
+        }
+
         .about-content ul {
             margin-bottom: 25px;
         }
@@ -175,6 +186,17 @@
             position: absolute;
             left: 0;
             font-weight: bold;
+        }
+
+        /* Work section links */
+        .work-content a {
+            color: var(--feldgrau);
+            font-weight: 500;
+        }
+
+        .work-content a:hover {
+            color: var(--indian-red);
+            text-decoration-thickness: 2px;
         }
 
         /* Contact Section */
@@ -262,7 +284,7 @@
 
             .photo-container {
                 width: 200px;
-                height: 200px;
+                height: auto;
             }
 
             .work-content {
@@ -273,7 +295,7 @@
                 float: none !important;
                 margin: 20px auto !important;
                 width: 150px;
-                height: 150px;
+                height: auto;
             }
         }
     </style>
@@ -294,10 +316,16 @@
 
                 <p>
                 I'm a Software and Robotics engineer based in the Boston area who specializes in creating software that enables robots to reliably
-                perform complex planning and manipulation tasks. I hold both Bachelor's (2018) and Master's (2020) degrees in Computer Science
-                from the University of Washington. During my undergrad I assisted in research in the Systems Lab and TAed for various courses. During my masters
-                I worked the in the <a href="https://personalrobotics.cs.washington.edu/">Personal Robotics Lab</a>, building
-                <a href="https://github.com/prl-mushr/mushr">MuSHR</a> a cost-effective autonomous vehicle for education and research.
+                perform complex planning and manipulation tasks. I hold Bachelor's (2018) and Master's (2020) degrees in Computer Science
+                from the University of Washington. During my undergrad while in classes I assisted in research in the Systems Lab and TAed for various courses.
+                During the summers I interned at Uber on the uDestroy Chaos engineering platform, and Sift (formerly SiftScience) on the DevOps team deploying
+                Kubernetes services.
+                </p>
+
+                <p>During my masters
+                I worked in the <a href="https://personalrobotics.cs.washington.edu/">Personal Robotics Lab</a>, building
+                <a href="https://github.com/prl-mushr/mushr">MuSHR</a>, a cost-effective autonomous vehicle for education and research. This
+                led me to a job at Zordi, where we build agricultural robotics for harvesting strawberries and performing other fine-manipulation tasks.
                 </p>
             </div>
         </div>
@@ -306,19 +334,14 @@
 
     <section class="work">
         <div class="container">
-            <h2 class="section-title">Robotics</h2>
             <div class="work-content">
                 <img src="dunes2.jpg" class="photo-container photo-right"/>
-
-                <p>
-                Before my working the Personal Robotics Lab I had no experience to robotics. A friend invited me to work on his project, which became the MuSHR project. 
-                </p>
-
                 Working at a robotics startup has allowed me to explore many different fields I had not previously been exposed to:
                 <ul>
-                    <li>I work closely with mechanical engineers to design the physical system in conjunction with the software system.</li>
-                    <li>I've learned how to create electrical schematics for power distribution to all the components and implement them such that our system functions with reliability.</li>
-                    <li>I've accidentally damaged many physical and electrical components. We've fostered an envirnoment where mistakes can be made toward exploring new ideas and systems.</li>
+                    <li>Collaborating closely with mechanical engineers to design the physical systems in conjunction with the software system.</li>
+                    <li>Creating electrical systems for power distribution and data distribution such that our systems function reliably.</li>
+                    <li>Designing under environmental constraints. The green houses get really hot and are not waterproof. Our networks aren't always connected.</li>
+                    <li>Collaborating closely with Machine Learning engineers to collect the right data to enable faster training and model validation.</li>
                 </ul>
             </div>
         </div>
