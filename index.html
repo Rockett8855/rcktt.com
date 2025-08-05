@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew Rockett</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --caf-noir: #4f351c;
+            --indian-red: #d55750;
+            --lion: #b59b80;
+            --dutch-white: #e3d4b7;
+            --ash-gray: #97a99d;
+            --feldgrau: #475753;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.6;
+            color: var(--caf-noir);
+            background-color: var(--dutch-white);
+        }
+
+        a {
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: var(--indian-red);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Section */
+        .header {
+            background-color: var(--feldgrau);
+            color: var(--dutch-white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: var(--ash-gray);
+        }
+
+        .header a {
+            color: var(--lion);
+        }
+
+        .header a:hover {
+            color: var(--dutch-white);
+        }
+
+        /* Photo styling - floated in sections */
+        .photo-container {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+            background-color: var(--ash-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--lion);
+            color: var(--feldgrau);
+            font-size: 1rem;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .photo-right {
+            float: right;
+            margin: 0 0 20px 30px;
+        }
+
+        .photo-left {
+            float: left;
+            margin: 0 30px 20px 0;
+        }
+
+        .photo-center {
+            margin: 20px auto;
+            display: block;
+            float: none;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background-color: var(--dutch-white);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--indian-red);
+            margin-bottom: 40px;
+            text-align: center;
+            font-weight: normal;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            overflow: hidden; /* Clear float */
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+        }
+
+        .about-content ul {
+            margin-bottom: 25px;
+        }
+
+        .about-content li {
+            margin-bottom: 8px;
+            padding-left: 10px;
+        }
+
+        /* work/Experience Section - Single Column */
+        .work {
+            padding: 80px 0;
+            background-color: white;
+            overflow: hidden; /* Clear floats */
+        }
+
+        .work-content {
+            margin-top: 40px;
+        }
+
+        .work-content h3 {
+            color: var(--indian-red);
+            margin: 40px 0 20px 0;
+            font-size: 1.4rem;
+            border-bottom: 2px solid var(--lion);
+            padding-bottom: 10px;
+        }
+
+        .work-content h3:first-child {
+            margin-top: 20px;
+        }
+
+        .work-content ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        .work-content li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .work-content li:before {
+            content: "•";
+            color: var(--indian-red);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background-color: var(--feldgrau);
+            color: var(--dutch-white);
+            overflow: hidden; /* Clear floats */
+        }
+
+        .contact .section-title {
+            color: var(--dutch-white);
+        }
+
+        .contact-info {
+            font-size: 1.1rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+        }
+
+        .contact-info a {
+            color: var(--lion);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: var(--indian-red);
+        }
+
+        /* Photo figure styling */
+        .photo-figure {
+            margin: 0;
+            display: inline-block;
+        }
+
+        .photo-figure.photo-right {
+            float: right;
+            margin: 0 0 20px 30px;
+        }
+
+        .photo-figure.photo-left {
+            float: left;
+            margin: 0 30px 20px 0;
+        }
+
+        .photo-figure.photo-center {
+            margin: 20px auto;
+            display: block;
+            float: none;
+            text-align: center;
+        }
+
+        .photo-figure .photo-container {
+            margin: 0;
+        }
+
+        .photo-caption {
+            font-size: 0.9rem;
+            color: var(--dutch-white);
+            text-align: center;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--caf-noir);
+            color: var(--ash-gray);
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .photo-container {
+                width: 200px;
+                height: 200px;
+            }
+
+            .work-content {
+                grid-template-columns: 1fr;
+            }
+
+            .photo-container {
+                float: none !important;
+                margin: 20px auto !important;
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Matthew Rockett</h1>
+            <p>Software Engineer &mdash; <a href="https://zordi.com">Zordi</a></p>
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">About</h2>
+            <div class="about-content">
+                <img src="thumbs-up.jpg" class="photo-container photo-right"/>
+
+                <p>
+                I'm a Software and Robotics engineer based in the Boston area who specializes in creating software that enables robots to reliably
+                perform complex planning and manipulation tasks. I hold both Bachelor's (2018) and Master's (2020) degrees in Computer Science
+                from the University of Washington. During my undergrad I assisted in research in the Systems Lab and TAed for various courses. During my masters
+                I worked the in the <a href="https://personalrobotics.cs.washington.edu/">Personal Robotics Lab</a>, building
+                <a href="https://github.com/prl-mushr/mushr">MuSHR</a> a cost-effective autonomous vehicle for education and research.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="work">
+        <div class="container">
+            <h2 class="section-title">Robotics</h2>
+            <div class="work-content">
+                <img src="dunes2.jpg" class="photo-container photo-right"/>
+
+                <p>
+                Before my working the Personal Robotics Lab I had no experience to robotics. A friend invited me to work on his project, which became the MuSHR project. 
+                </p>
+
+                Working at a robotics startup has allowed me to explore many different fields I had not previously been exposed to:
+                <ul>
+                    <li>I work closely with mechanical engineers to design the physical system in conjunction with the software system.</li>
+                    <li>I've learned how to create electrical schematics for power distribution to all the components and implement them such that our system functions with reliability.</li>
+                    <li>I've accidentally damaged many physical and electrical components. We've fostered an envirnoment where mistakes can be made toward exploring new ideas and systems.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-info">
+                <figure class="photo-figure photo-right">
+                    <img src="cat-sweater.jpg"
+                         alt="me fixing a cat toy with a captive audience (a cat)"
+                         class="photo-container"
+                    />
+                    <figcaption class="photo-caption">The color scheme for this <br>website is inspired by a<br> beloved sweater.</figcaption>
+                </figure>
+
+                <p>Email: matthew [AT] rockett.garden</p>
+                <p>Location: Somerville, MA</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

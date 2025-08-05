@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --caf-noir: #4f351c;
+            --indian-red: #d55750;
+            --lion: #b59b80;
+            --dutch-white: #e3d4b7;
+            --ash-gray: #97a99d;
+            --feldgrau: #475753;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.6;
+            color: var(--caf-noir);
+            background-color: var(--dutch-white);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .error-container {
+            text-align: center;
+            max-width: 800px;
+            padding: 40px 20px;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            color: var(--indian-red);
+            font-weight: normal;
+            margin-bottom: 20px;
+            line-height: 1;
+        }
+
+        .error-title {
+            font-size: 2.5rem;
+            color: var(--feldgrau);
+            margin-bottom: 30px;
+            font-weight: normal;
+        }
+
+        .error-message {
+            font-size: 1.2rem;
+            color: var(--caf-noir);
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .home-link {
+            display: inline-block;
+            background-color: var(--indian-red);
+            color: var(--dutch-white);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .home-link:hover {
+            background-color: var(--feldgrau);
+        }
+
+        .decoration {
+            width: 100px;
+            height: 3px;
+            background-color: var(--lion);
+            margin: 30px auto;
+        }
+
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 6rem;
+            }
+
+            .error-title {
+                font-size: 2rem;
+            }
+
+            .error-message {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <div class="decoration"></div>
+        <h1 class="error-title">Page Not Found</h1>
+    </div>
+</body>
+</html>
